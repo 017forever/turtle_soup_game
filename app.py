@@ -449,7 +449,8 @@ if user_input:
         try:
             ai_reply = ask_ai(user_input)
         except Exception as e:
-            ai_reply = f"API 錯誤：{e}"
+            print(f"[DEBUG] API error: {e}")  # 只在 server 端顯示
+            ai_reply = "與故事／題目無關"
 
         loading_placeholder.empty()
 
